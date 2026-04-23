@@ -19,7 +19,7 @@ services:
 
   user-service:
     image: bharathvarma06/user-service
-    container_name: user_service
+    container_name: user-service
     restart: always
     depends_on:
       - mysql
@@ -30,7 +30,7 @@ services:
 
   api-gateway:
     image: bharathvarma06/api-gateway
-    container_name: api_gateway
+    container_name: api-gateway
     restart: always
     depends_on:
       - user-service
@@ -41,7 +41,7 @@ services:
 
   order-service:
     image: bharathvarma06/order-service
-    container_name: order_service
+    container_name: order-service
     restart: always
     depends_on:
       - user-service
@@ -52,7 +52,7 @@ services:
 
   frontend:
     image: bharathvarma06/frontend
-    container_name: frontend_ui
+    container_name: frontend-ui
     restart: always
     depends_on:
       - api-gateway
