@@ -11,7 +11,7 @@ function Login() {
     try {
 
 
-      const res = await axios.post("http://localhost:8000/login", {
+      const res = await axios.post("http://api-gateway:8000/login", {
         username: username,
         password: password,
       });

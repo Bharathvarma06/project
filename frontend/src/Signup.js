@@ -9,7 +9,7 @@ function Signup() {
 
   const handleSignup = async () => {
     try {
-      await axios.post("http://localhost:8000/signup", {
+      await axios.post("http://api-gateway:8000/signup", {
         username: username,
         password: password,
       });

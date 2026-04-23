@@ -5,6 +5,11 @@ services:
     image: mysql:8.0
     container_name: micro_mysql
     restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: microservices
+      MYSQL_USER: micro
+      MYSQL_PASSWORD: password
     ports:
       - "3306:3306"
     volumes:

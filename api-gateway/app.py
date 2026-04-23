@@ -17,7 +17,7 @@ app.add_middleware(
 @app.post("/signup")
 def signup(user: dict):
     response = requests.post(
-        "http://localhost:8001/signup",
+        "http://user-service:8001/signup",
         json=user
     )
     return response.json()
@@ -26,7 +26,7 @@ def signup(user: dict):
 @app.post("/login")
 def login(user: dict):
     response = requests.post(
-        "http://localhost:8001/login",
+        "http://user-service:8001/login",
         json=user
     )
     return response.json()
