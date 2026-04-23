@@ -4,7 +4,7 @@ from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import declarative_base, sessionmaker
 
 # 🐬 DATABASE CONFIG
-DATABASE_URL = "mysql+pymysql://micro:password@mysql:3306/microservices"
+DATABASE_URL = "mysql+pymysql://micro:password@micro_mysql:3306/microservices"
 
 engine = create_engine(DATABASE_URL, echo=True)  # echo=True = SQL logs
 SessionLocal = sessionmaker(bind=engine)
