@@ -12,7 +12,7 @@ function App() {
     const url = isLogin ? "login" : "signup";
 
     try {
-      const res = await axios.post(`http://api-gateway:8000/${url}`, {
+      const res = await axios.post(`http://localhost:8000/${url}`, {
         username: username,
         password: password
       });
