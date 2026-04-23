@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: micro_mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - micro_net
+
+  user-service:
+    image: bharathvarma06/user-service
+    container_name: user_service
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - "8001:8001"
+    networks:
+      - micro_net
+
+  api-gateway:
+    image: bharathvarma06/api-gateway
+    container_name: api_gateway
+    restart: always
+    depends_on:
+      - user-service
+    ports:
+      - "8000:8000"
+    networks:
+      - micro_net
+
+  order-service:
+    image: bharathvarma06/order-service
+    container_name: order_service
+    restart: always
+    depends_on:
+      - user-service
+    ports:
+      - "8002:8002"
+    networks:
+      - micro_net
+
+  frontend:
+    image: bharathvarma06/frontend
+    container_name: frontend_ui
+    restart: always
+    depends_on:
+      - api-gateway
+    ports:
+      - "3000:3000"
+    networks:
+      - micro_net
+
+volumes:
+  mysql_data:
+
+networks:
+  micro_net:
+    driver: bridge
