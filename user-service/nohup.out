@@ -1272,3 +1272,385 @@ WHERE users.username = %(username_1)s
  LIMIT %(param_1)s
 2026-04-14 09:29:45,687 INFO sqlalchemy.engine.Engine [cached since 39.25s ago] {'username_1': 'bharath', 'param_1': 1}
 INFO:     127.0.0.1:47272 - "POST /login HTTP/1.1" 200 OK
+Traceback (most recent call last):
+  File "/usr/bin/uvicorn", line 33, in <module>
+    sys.exit(load_entry_point('uvicorn==0.15.0', 'console_scripts', 'uvicorn')())
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/uvicorn/main.py", line 425, in main
+    run(app, **kwargs)
+  File "/usr/lib/python3/dist-packages/uvicorn/main.py", line 447, in run
+    server.run()
+  File "/usr/lib/python3/dist-packages/uvicorn/server.py", line 68, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/lib/python3/dist-packages/uvicorn/server.py", line 76, in serve
+    config.load()
+  File "/usr/lib/python3/dist-packages/uvicorn/config.py", line 448, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/usr/lib/python3/dist-packages/uvicorn/importer.py", line 24, in import_from_string
+    raise exc from None
+  File "/usr/lib/python3/dist-packages/uvicorn/importer.py", line 21, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/order-service/devops/user-service/./app.py", line 1, in <module>
+    from fastapi import FastAPI, HTTPException
+ModuleNotFoundError: No module named 'fastapi'
+Traceback (most recent call last):
+  File "/usr/bin/uvicorn", line 33, in <module>
+    sys.exit(load_entry_point('uvicorn==0.15.0', 'console_scripts', 'uvicorn')())
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/uvicorn/main.py", line 425, in main
+    run(app, **kwargs)
+  File "/usr/lib/python3/dist-packages/uvicorn/main.py", line 447, in run
+    server.run()
+  File "/usr/lib/python3/dist-packages/uvicorn/server.py", line 68, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/lib/python3/dist-packages/uvicorn/server.py", line 76, in serve
+    config.load()
+  File "/usr/lib/python3/dist-packages/uvicorn/config.py", line 448, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/usr/lib/python3/dist-packages/uvicorn/importer.py", line 24, in import_from_string
+    raise exc from None
+  File "/usr/lib/python3/dist-packages/uvicorn/importer.py", line 21, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/order-service/devops/user-service/./app.py", line 1, in <module>
+    from fastapi import FastAPI, HTTPException
+ModuleNotFoundError: No module named 'fastapi'
+Traceback (most recent call last):
+  File "/usr/bin/uvicorn", line 33, in <module>
+    sys.exit(load_entry_point('uvicorn==0.15.0', 'console_scripts', 'uvicorn')())
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/uvicorn/main.py", line 425, in main
+    run(app, **kwargs)
+  File "/usr/lib/python3/dist-packages/uvicorn/main.py", line 447, in run
+    server.run()
+  File "/usr/lib/python3/dist-packages/uvicorn/server.py", line 68, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/lib/python3/dist-packages/uvicorn/server.py", line 76, in serve
+    config.load()
+  File "/usr/lib/python3/dist-packages/uvicorn/config.py", line 448, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/usr/lib/python3/dist-packages/uvicorn/importer.py", line 24, in import_from_string
+    raise exc from None
+  File "/usr/lib/python3/dist-packages/uvicorn/importer.py", line 21, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/order-service/devops/user-service/./app.py", line 1, in <module>
+    from fastapi import FastAPI, HTTPException
+ModuleNotFoundError: No module named 'fastapi'
+Traceback (most recent call last):
+  File "/usr/bin/uvicorn", line 33, in <module>
+    sys.exit(load_entry_point('uvicorn==0.15.0', 'console_scripts', 'uvicorn')())
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/uvicorn/main.py", line 425, in main
+    run(app, **kwargs)
+  File "/usr/lib/python3/dist-packages/uvicorn/main.py", line 447, in run
+    server.run()
+  File "/usr/lib/python3/dist-packages/uvicorn/server.py", line 68, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/lib/python3/dist-packages/uvicorn/server.py", line 76, in serve
+    config.load()
+  File "/usr/lib/python3/dist-packages/uvicorn/config.py", line 448, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/usr/lib/python3/dist-packages/uvicorn/importer.py", line 24, in import_from_string
+    raise exc from None
+  File "/usr/lib/python3/dist-packages/uvicorn/importer.py", line 21, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/order-service/devops/user-service/./app.py", line 1, in <module>
+    from fastapi import FastAPI, HTTPException
+ModuleNotFoundError: No module named 'fastapi'
+Traceback (most recent call last):
+  File "/usr/bin/uvicorn", line 33, in <module>
+    sys.exit(load_entry_point('uvicorn==0.15.0', 'console_scripts', 'uvicorn')())
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/uvicorn/main.py", line 425, in main
+    run(app, **kwargs)
+  File "/usr/lib/python3/dist-packages/uvicorn/main.py", line 447, in run
+    server.run()
+  File "/usr/lib/python3/dist-packages/uvicorn/server.py", line 68, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/lib/python3/dist-packages/uvicorn/server.py", line 76, in serve
+    config.load()
+  File "/usr/lib/python3/dist-packages/uvicorn/config.py", line 448, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/usr/lib/python3/dist-packages/uvicorn/importer.py", line 24, in import_from_string
+    raise exc from None
+  File "/usr/lib/python3/dist-packages/uvicorn/importer.py", line 21, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/order-service/devops/user-service/./app.py", line 1, in <module>
+    from fastapi import FastAPI, HTTPException
+ModuleNotFoundError: No module named 'fastapi'
+Traceback (most recent call last):
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/pymysql/connections.py", line 661, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 824, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    with util.safe_reraise():
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/pymysql/connections.py", line 365, in __init__
+    self.connect()
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/pymysql/connections.py", line 723, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'micro_mysql' ([Errno -3] Temporary failure in name resolution)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/order-service/devops/venv/bin/uvicorn", line 8, in <module>
+    sys.exit(main())
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/click/core.py", line 1485, in __call__
+    return self.main(*args, **kwargs)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/click/core.py", line 1406, in main
+    rv = self.invoke(ctx)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/click/core.py", line 1269, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/click/core.py", line 824, in invoke
+    return callback(*args, **kwargs)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/uvicorn/main.py", line 433, in main
+    run(
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/uvicorn/main.py", line 606, in run
+    server.run()
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/uvicorn/server.py", line 75, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/uvicorn/_compat.py", line 60, in asyncio_run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/uvicorn/server.py", line 79, in serve
+    await self._serve(sockets)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/uvicorn/server.py", line 86, in _serve
+    config.load()
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/uvicorn/config.py", line 441, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/order-service/devops/user-service/app.py", line 25, in <module>
+    Base.metadata.create_all(bind=engine)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 5931, in create_all
+    bind._run_ddl_visitor(
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3267, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "/usr/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3257, in begin
+    with self.connect() as conn:
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    with util.safe_reraise():
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/pymysql/connections.py", line 365, in __init__
+    self.connect()
+  File "/root/order-service/devops/venv/lib/python3.10/site-packages/pymysql/connections.py", line 723, in connect
+    raise exc
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'micro_mysql' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-26 13:11:13,984 INFO sqlalchemy.engine.Engine SELECT DATABASE()
+2026-04-26 13:11:13,985 INFO sqlalchemy.engine.Engine [raw sql] {}
+2026-04-26 13:11:13,986 INFO sqlalchemy.engine.Engine SELECT @@sql_mode
+2026-04-26 13:11:13,986 INFO sqlalchemy.engine.Engine [raw sql] {}
+2026-04-26 13:11:13,987 INFO sqlalchemy.engine.Engine SELECT @@lower_case_table_names
+2026-04-26 13:11:13,987 INFO sqlalchemy.engine.Engine [raw sql] {}
+2026-04-26 13:11:13,988 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-04-26 13:11:13,989 INFO sqlalchemy.engine.Engine DESCRIBE `microservices`.`users`
+2026-04-26 13:11:13,989 INFO sqlalchemy.engine.Engine [raw sql] {}
+2026-04-26 13:11:13,995 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     Started server process [9352]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2026-04-26 13:11:38,476 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-04-26 13:11:38,480 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password 
+FROM users 
+WHERE users.username = %(username_1)s 
+ LIMIT %(param_1)s
+2026-04-26 13:11:38,480 INFO sqlalchemy.engine.Engine [generated in 0.00028s] {'username_1': 'kamal', 'param_1': 1}
+INFO:     127.0.0.1:41816 - "POST /login HTTP/1.1" 200 OK
+2026-04-26 13:13:05,690 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-04-26 13:13:05,691 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password 
+FROM users 
+WHERE users.username = %(username_1)s 
+ LIMIT %(param_1)s
+2026-04-26 13:13:05,691 INFO sqlalchemy.engine.Engine [cached since 87.21s ago] {'username_1': 'shivani', 'param_1': 1}
+2026-04-26 13:13:05,698 INFO sqlalchemy.engine.Engine INSERT INTO users (username, password) VALUES (%(username)s, %(password)s)
+2026-04-26 13:13:05,699 INFO sqlalchemy.engine.Engine [generated in 0.00026s] {'username': 'shivani', 'password': 'shivani123'}
+2026-04-26 13:13:05,748 INFO sqlalchemy.engine.Engine COMMIT
+2026-04-26 13:13:05,776 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-04-26 13:13:05,778 INFO sqlalchemy.engine.Engine SELECT users.id, users.username, users.password 
+FROM users 
+WHERE users.id = %(pk_1)s
+2026-04-26 13:13:05,778 INFO sqlalchemy.engine.Engine [generated in 0.00045s] {'pk_1': 5}
+INFO:     127.0.0.1:60108 - "POST /signup HTTP/1.1" 200 OK
+2026-04-26 13:13:13,316 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-04-26 13:13:13,316 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password 
+FROM users 
+WHERE users.username = %(username_1)s 
+ LIMIT %(param_1)s
+2026-04-26 13:13:13,316 INFO sqlalchemy.engine.Engine [cached since 94.84s ago] {'username_1': 'shivani', 'param_1': 1}
+INFO:     127.0.0.1:56330 - "POST /login HTTP/1.1" 200 OK
